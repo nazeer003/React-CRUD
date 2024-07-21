@@ -1,0 +1,45 @@
+===============File Name mongo.js==== db name:tutorial,tablename:tuto======================
+
+const mongoose = require("mongoose");
+
+mongoose
+  .connect("mongodb://localhost:27017/tutorial", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((error) => {
+    console.log("Error connecting to MongoDB", error);
+  });
+
+const tutSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+});
+
+const Collection = mongoose.model("tut", tutSchema);
+
+const data = [{
+  name: "Nazeer",
+},{
+    name: "Basha",
+},{
+    name: "Shaik",
+
+}];
+
+Collection.insertMany(data)
+  .then((result) => {
+    console.log("Data inserted successfully", result);
+  })
+  .catch((error) => {
+    console.log("Error inserting data", error);
+  });
+================================================================
+*****************************************
+https://www.youtube.com/watch?v=wR735I2hVpI
+******************************************

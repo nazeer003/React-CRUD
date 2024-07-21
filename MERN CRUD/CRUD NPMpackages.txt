@@ -1,0 +1,24 @@
+********************Client***************************
+npm init -y -> create react app
+cd client(clint is folder name)
+npm install
+npm run dev
+npm install bootstrap axios react-router-dom
+-----------------------------------------------------
+********************Server***************************
+cd server -> server is folted name
+npm init -y
+npm install express mongoose cors nodemon
+
+======================================================
+db Name: crud
+collection Name :users
+********************************************************
+https://www.youtube.com/watch?v=enOsPhp2Z6Q&t=2438s
+********************************************************
+======================================================
+For star code take 2 separate Terminals
+1. cd client          cd server
+2.npm run dev         npm run dev
+
+Note: need run both frontend and backend like (npm start or (npm run dev) & nodemon index.js) index.js was alredy given in package to Start
